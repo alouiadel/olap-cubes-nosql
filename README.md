@@ -102,5 +102,9 @@ MongoDB bridges relational and non-relational worlds, making it ideal for implem
 }
 ```
 
+## 📄 OLAP Cubes Overview
+
+For a detailed description of the four OLAP cubes used in this project, refer to the [OLAP Cubes Overview](cubes-overview.md) document.
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
