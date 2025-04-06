@@ -1,0 +1,50 @@
+supplierID,supplierName,supplierCity,supplierCountry,categorieID,categorieName,produit_num,priceLevel,stockLevel
+1,Exotic Liquids,London,UK,1,Beverages,2,Medium,Medium
+1,Exotic Liquids,London,UK,2,Condiments,1,Medium,Medium
+2,New Orleans Cajun Delights,New Orleans,USA,2,Condiments,4,Medium,High
+3,Grandma Kelly's Homestead,Ann Arbor,USA,2,Condiments,2,Medium,High
+3,Grandma Kelly's Homestead,Ann Arbor,USA,7,Produce,1,Medium,Medium
+4,Tokyo Traders,Tokyo,Japan,6,Meat/Poultry,1,High,Medium
+4,Tokyo Traders,Tokyo,Japan,7,Produce,1,Medium,Low
+4,Tokyo Traders,Tokyo,Japan,8,Seafood,1,Medium,Medium
+5,Cooperativa de Quesos 'Las Cabras',Oviedo,Spain,4,Dairy Products,2,Medium,Medium
+6,Mayumi's,Osaka,Japan,2,Condiments,1,Medium,Medium
+6,Mayumi's,Osaka,Japan,7,Produce,1,Medium,Medium
+6,Mayumi's,Osaka,Japan,8,Seafood,1,Low,Medium
+7,"Pavlova, Ltd.",Melbourne,Australia,1,Beverages,1,Medium,Medium
+7,"Pavlova, Ltd.",Melbourne,Australia,2,Condiments,1,Medium,Medium
+7,"Pavlova, Ltd.",Melbourne,Australia,3,Confections,1,Medium,Medium
+7,"Pavlova, Ltd.",Melbourne,Australia,6,Meat/Poultry,1,Medium,Low
+7,"Pavlova, Ltd.",Melbourne,Australia,8,Seafood,1,High,Medium
+8,"Specialty Biscuits, Ltd.",Manchester,UK,3,Confections,4,Low,Medium
+9,PB Knäckebröd AB,Göteborg,Sweden ,5,Grains/Cereals,2,Medium,High
+10,Refrescos Americanas LTDA,São Paulo,Brazil,1,Beverages,1,Low,Medium
+11,Heli Süßwaren GmbH & Co. KG,Berlin,Germany,3,Confections,3,Medium,High
+12,Plutzer Lebensmittelgroßmärkte AG,Frankfurt,Germany,1,Beverages,1,Low,High
+12,Plutzer Lebensmittelgroßmärkte AG,Frankfurt,Germany,2,Condiments,1,Medium,Medium
+12,Plutzer Lebensmittelgroßmärkte AG,Frankfurt,Germany,5,Grains/Cereals,1,Medium,Medium
+12,Plutzer Lebensmittelgroßmärkte AG,Frankfurt,Germany,6,Meat/Poultry,1,High,Low
+12,Plutzer Lebensmittelgroßmärkte AG,Frankfurt,Germany,7,Produce,1,Medium,Medium
+13,Nord-Ost-Fisch Handelsgesellschaft mbH,Cuxhaven,Germany,8,Seafood,1,Medium,Medium
+14,Formaggi Fortini s.r.l.,Ravenna,Italy,4,Dairy Products,3,Medium,Low
+15,Norske Meierier,Sandvika,Norway,4,Dairy Products,3,Low,High
+16,Bigfoot Breweries,Bend,USA,1,Beverages,3,Medium,High
+17,Svensk Sjöföda AB,Stockholm,Sweden,8,Seafood,3,Medium,High
+18,Aux joyeux ecclésiastiques,Paris,France,1,Beverages,2,High,Medium
+19,New England Seafood Cannery,Boston,USA,8,Seafood,2,Medium,High
+20,Leka Trading,Singapore,Singapore,1,Beverages,1,Medium,Medium
+20,Leka Trading,Singapore,Singapore,2,Condiments,1,Medium,Medium
+20,Leka Trading,Singapore,Singapore,5,Grains/Cereals,1,Medium,Medium
+21,Lyngbysild,Lyngby,Denmark,8,Seafood,2,Low,Low
+22,Zaanse Snoepfabriek,Zaandam,Netherlands,3,Confections,2,Low,Medium
+23,Karkki Oy,Lappeenranta,Finland,1,Beverages,1,Medium,High
+23,Karkki Oy,Lappeenranta,Finland,3,Confections,2,Medium,Medium
+24,"G'day, Mate",Sydney,Australia,5,Grains/Cereals,1,Low,Medium
+24,"G'day, Mate",Sydney,Australia,6,Meat/Poultry,1,Medium,Low
+24,"G'day, Mate",Sydney,Australia,7,Produce,1,High,Medium
+25,Ma Maison,Montréal,Canada,6,Meat/Poultry,2,Low,Medium
+26,Pasta Buttini s.r.l.,Salerno,Italy,5,Grains/Cereals,2,Medium,Medium
+27,Escargots Nouveaux,Montceau,France,8,Seafood,1,Medium,High
+28,Gai pâturage,Annecy,France,4,Dairy Products,2,High,High
+29,Forêts d'érables,Ste-Hyacinthe,Canada,2,Condiments,1,Medium,High
+29,Forêts d'érables,Ste-Hyacinthe,Canada,3,Confections,1,Medium,Medium

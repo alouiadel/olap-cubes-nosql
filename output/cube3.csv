@@ -1,0 +1,70 @@
+customerCity,customerCountry,customer_num,orderLevel,salesLevel
+Aachen,Germany,1,High,High
+Albuquerque,USA,1,High,High
+Anchorage,USA,1,High,High
+Barcelona,Spain,1,High,High
+Barquisimeto,Venezuela,1,High,High
+Bergamo,Italy,1,High,High
+Berlin,Germany,1,High,High
+Bern,Switzerland,1,High,High
+Boise,USA,1,High,High
+Brandenburg,Germany,1,High,High
+Bruxelles,Belgium,1,High,High
+Bräcke,Sweden,1,High,High
+Buenos Aires,Argentina,3,High,High
+Butte,USA,1,High,High
+Campinas,Brazil,1,High,High
+Caracas,Venezuela,1,High,High
+Charleroi,Belgium,1,High,High
+Cork,Ireland,1,High,High
+Cowes,UK,1,High,High
+Cunewalde,Germany,1,High,High
+Elgin,USA,1,High,High
+Eugene,USA,1,High,High
+Frankfurt a.M.,Germany,1,High,High
+Genève,Switzerland,1,High,High
+Graz,Austria,1,High,High
+Helsinki,Finland,1,High,High
+I. de Margarita,Venezuela,1,High,High
+Kirkland,USA,1,High,High
+Kobenhavn,Denmark,1,High,High
+Köln,Germany,1,High,High
+Lander,USA,1,High,High
+Leipzig,Germany,1,High,High
+Lille,France,1,High,High
+Lisboa,Portugal,2,High,High
+London,UK,6,High,High
+Luleå,Sweden,1,High,High
+Lyon,France,1,High,High
+Madrid,Spain,3,High,High
+Mannheim,Germany,1,High,High
+Marseille,France,1,High,High
+Montréal,Canada,1,High,High
+México D.F.,Mexico,5,High,High
+München,Germany,1,High,High
+Münster,Germany,1,High,High
+Nantes,France,2,High,High
+Oulu,Finland,1,High,High
+Paris,France,2,High,High
+Portland,USA,2,High,High
+Reggio Emilia,Italy,1,High,High
+Reims,France,1,High,High
+Resende,Brazil,1,High,High
+Rio de Janeiro,Brazil,3,High,High
+Salzburg,Austria,1,High,High
+San Cristóbal,Venezuela,1,High,High
+San Francisco,USA,1,High,High
+Sao Paulo,Brazil,4,High,High
+Seattle,USA,1,High,High
+Sevilla,Spain,1,High,High
+Stavern,Norway,1,High,High
+Strasbourg,France,1,High,High
+Stuttgart,Germany,1,High,High
+Torino,Italy,1,High,High
+Toulouse,France,1,High,High
+Tsawassen,Canada,1,High,High
+Vancouver,Canada,1,High,High
+Versailles,France,1,High,High
+Walla Walla,USA,1,High,High
+Warszawa,Poland,1,High,High
+Århus,Denmark,1,High,High

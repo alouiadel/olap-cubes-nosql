@@ -106,5 +106,65 @@ MongoDB bridges relational and non-relational worlds, making it ideal for implem
 
 For a detailed description of the four OLAP cubes used in this project, refer to the [OLAP Cubes Overview](cubes-overview.md) document.
 
+## 🛠️ Using the Scripts
+
+This project includes Python scripts to generate OLAP cube data from the Northwind database and prepare it for MongoDB import.
+
+### 📋 Prerequisites
+
+- Python 3.9 or higher
+- Required Python packages (install using):
+  ```
+  pip install -r requirements.txt
+  ```
+- MongoDB (for importing the generated data)
+
+### 🔄 Generating OLAP Cubes
+
+The scripts automatically download the Northwind database and transform it into MongoDB-compatible CSV files:
+
+1. **Run all cubes at once:**
+   ```
+   python scripts/generate_all_cubes.py
+   ```
+   This will generate all cubes and validate them automatically.
+
+2. **Run individual cube generators:**
+   ```
+   python scripts/generate_cube1.py  # Customer and employee data
+   python scripts/generate_cube2.py  # Supplier and product data
+   python scripts/generate_cube3.py  # Customer order and sales levels
+   python scripts/generate_cube4.py  # Revenue analysis data
+   ```
+
+### 🔍 Validating OLAP Cubes
+
+You can validate the generated cube CSV files to ensure they're properly structured:
+
+```bash
+python scripts/validate_cubes.py
+```
+
+The validation script checks:
+- File existence
+- Presence of all required columns
+- Data integrity (no missing critical values)
+- Overall data quality
+
+Each cube is validated against its expected schema, and a summary report is provided.
+
+### 📥 Importing to MongoDB
+
+After generating the CSV files, you can import them into MongoDB using:
+
+```bash
+mongoimport --db northwind_olap --collection cube1 --type csv --headerline --file output/cube1.csv
+mongoimport --db northwind_olap --collection cube2 --type csv --headerline --file output/cube2.csv
+mongoimport --db northwind_olap --collection cube3 --type csv --headerline --file output/cube3.csv
+mongoimport --db northwind_olap --collection cube4 --type csv --headerline --file output/cube4.csv
+```
+
+Alternatively, you can use MongoDB Compass GUI to import the CSV files.
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
