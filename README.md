@@ -62,40 +62,45 @@ MongoDB is a document-oriented NoSQL database that stores data in flexible, JSON
 
 MongoDB bridges relational and non-relational worlds, making it ideal for implementing OLAP solutions while maintaining NoSQL's scalability benefits.
 
-## 🎯 Objectives
-- ...
-- ...
+## 💫 Star Schema Migration to MongoDB
 
-## 🔧 Technologies
-- MongoDB
-- ...
-- ...
+### 🔄 Transformation Process
+- **Fact Table** → MongoDB Collection with embedded metrics/measures
+- **Dimension Tables** → Can be implemented in several ways:
+  - 📑 Embedded subdocuments (denormalization)
+  - 🔗 Document references (normalization)
+  - 🔀 Hybrid approach based on access patterns
 
-## 🏗️ Architecture
+### 📝 Example Migration
+#### Star Schema Example
+- **Fact Table**: `TF_Revenue` (OrderMonth, CustomerID, ProductID, OrdersRevenue, ShippedRevenue)
+- **Dimension Tables**:
+  - `TD_Time` (OrderMonth, OrderYear)
+  - `TD_Customers` (CustomerID, CustomerName, City, Country)
+  - `TD_Products` (ProductID, ProductName, CategoryID, CategoryName)
+
+#### MongoDB Document Model
+```javascript
+{
+  "_id": 22333,
+  "OrdersRevenue": 5,
+  "ShippedRevenue": 6,
+  "OrderMonth": "3-2021",
+  "OrderYear": "2021",
+  "Customer": {
+    "CustomerID": 105,
+    "CustomerName": "Mohamed",
+    "City": "Hadjout",
+    "Country": "Algeria"
+  },
+  "Product": {
+    "ProductID": 522,
+    "ProductName": "Nike",
+    "CategoryID": 55,
+    "CategoryName": "Shoes"
+  }
+}
 ```
-// Architecture diagram or description here
-```
-
-## 📊 Data Model
-```
-// Data model description here
-```
-
-## ⚙️ Setup Instructions
-```bash
-# Setup commands here
-```
-
-## 🔍 Features
-- ...
-- ...
-
-## 📈 Performance Considerations
-- ...
-- ...
-
-## 👥 Contributors
-- ...
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
