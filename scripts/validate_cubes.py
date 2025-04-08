@@ -90,7 +90,7 @@ def validate_data_integrity(df, cube_name):
 
 def validate_cube(cube_name):
     """Validate a specific cube CSV file"""
-    output_dir = Path(__file__).parent.parent / 'output'
+    output_dir = Path(__file__).parent.parent / 'northwind_csv_cubes'
     file_path = output_dir / f"{cube_name}.csv"
     
     print(f"\n{Fore.CYAN}{Style.BRIGHT}Validating {cube_name}...{Style.RESET_ALL}")

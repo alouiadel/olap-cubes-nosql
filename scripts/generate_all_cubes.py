@@ -38,10 +38,10 @@ def main():
         print(f"\n{Fore.GREEN}{Style.BRIGHT}3. All cubes generated and validated successfully!{Style.RESET_ALL}")
         print(f"\n{Fore.MAGENTA}{Style.BRIGHT}MongoDB Import Instructions:{Style.RESET_ALL}")
         print(f"{Fore.MAGENTA}To import these CSV files into MongoDB, you can use the following commands:{Style.RESET_ALL}")
-        print(f"\n{Fore.CYAN}mongoimport --db northwind_olap --collection cube1 --type csv --headerline --file output/cube1.csv{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube2 --type csv --headerline --file output/cube2.csv{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube3 --type csv --headerline --file output/cube3.csv{Style.RESET_ALL}")
-        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube4 --type csv --headerline --file output/cube4.csv{Style.RESET_ALL}")
+        print(f"\n{Fore.CYAN}mongoimport --db northwind_olap --collection cube1 --type csv --headerline --file northwind_csv_cubes/cube1.csv{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube2 --type csv --headerline --file northwind_csv_cubes/cube2.csv{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube3 --type csv --headerline --file northwind_csv_cubes/cube3.csv{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}mongoimport --db northwind_olap --collection cube4 --type csv --headerline --file northwind_csv_cubes/cube4.csv{Style.RESET_ALL}")
         
         print(f"\n{Fore.YELLOW}Or, use the MongoDB Compass GUI to import the CSV files.{Style.RESET_ALL}")
     else:

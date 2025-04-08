@@ -87,10 +87,10 @@ You can interact with the MongoDB container in several ways:
 2. **Import the OLAP cube data into the container**:
    ```bash
    # First, copy all CSV files into the container
-   docker cp output/cube1.csv mongodb:/tmp/cube1.csv
-   docker cp output/cube2.csv mongodb:/tmp/cube2.csv
-   docker cp output/cube3.csv mongodb:/tmp/cube3.csv
-   docker cp output/cube4.csv mongodb:/tmp/cube4.csv
+   docker cp northwind_csv_cubes/cube1.csv mongodb:/tmp/cube1.csv
+   docker cp northwind_csv_cubes/cube2.csv mongodb:/tmp/cube2.csv
+   docker cp northwind_csv_cubes/cube3.csv mongodb:/tmp/cube3.csv
+   docker cp northwind_csv_cubes/cube4.csv mongodb:/tmp/cube4.csv
    
    # Then import each cube into MongoDB
    docker exec -it mongodb mongoimport --db northwind_olap --collection cube1 --type csv --headerline --file /tmp/cube1.csv

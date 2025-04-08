@@ -37,7 +37,7 @@ def connect_to_northwind():
     Returns a connection object
     """
     # Define the path to the Northwind database
-    data_dir = Path(__file__).parent.parent / 'data'
+    data_dir = Path(__file__).parent.parent / 'northwind_data'
     db_path = data_dir / 'northwind.sqlite'
     
     # Create the data directory if it doesn't exist
@@ -62,7 +62,7 @@ def save_to_csv(df, cube_name):
         cube_name: Name of the cube (used for filename)
     """
     # Create output directory if it doesn't exist
-    output_dir = Path(__file__).parent.parent / 'output'
+    output_dir = Path(__file__).parent.parent / 'northwind_csv_cubes'
     os.makedirs(output_dir, exist_ok=True)
     
     # Save to CSV
