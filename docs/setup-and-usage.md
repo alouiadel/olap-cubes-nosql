@@ -66,6 +66,14 @@ If you don't have MongoDB installed locally, you can easily run it in a Docker c
    docker ps
    ```
 
+4. **Restarting the container** (if needed):
+   ```bash
+   # Stop the container
+   docker stop mongodb
+   # Start it again
+   docker start mongodb
+   ```
+
 ### Executing MongoDB Commands
 
 You can interact with the MongoDB container in several ways:
