@@ -3,6 +3,7 @@
 This document provides an overview of the four OLAP cubes used in this project. Each cube represents a specific aspect of the data modeled for analytical purposes.
 
 ## Cube 1
+
 - **Description**: Contains customer and employee-related data, along with order details.
 - **Attributes**:
   - `customerID`: Customer identifier.
@@ -19,6 +20,7 @@ This document provides an overview of the four OLAP cubes used in this project. 
   - `notShipOrders`: Number of unshipped orders.
 
 ## Cube 2
+
 - **Description**: Focuses on supplier and product category data.
 - **Attributes**:
   - `supplierID`: Supplier identifier.
@@ -32,6 +34,7 @@ This document provides an overview of the four OLAP cubes used in this project. 
   - `produit_num`: Number of products.
 
 ## Cube 3
+
 - **Description**: Provides insights into customer orders and sales levels.
 - **Attributes**:
   - `customerCity`: Customer city.
@@ -41,6 +44,7 @@ This document provides an overview of the four OLAP cubes used in this project. 
   - `customer_num`: Number of customers.
 
 ## Cube 4
+
 - **Description**: Combines product, order, and customer data for revenue analysis.
 - **Attributes**:
   - `ProductID`: Product identifier.

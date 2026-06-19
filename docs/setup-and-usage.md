@@ -14,9 +14,11 @@
 The scripts automatically download the Northwind database and transform it into MongoDB-compatible CSV files:
 
 1. **Run all cubes at once:**
+
    ```
    python scripts/generate_all_cubes.py
    ```
+
    This will generate all cubes and validate them automatically.
 
 2. **Run individual cube generators:**
@@ -36,6 +38,7 @@ python scripts/validate_cubes.py
 ```
 
 The validation script checks:
+
 - File existence
 - Presence of all required columns
 - Data integrity (no missing critical values)
@@ -52,9 +55,11 @@ If you don't have MongoDB installed locally, you can easily run it in a Docker c
 1. **Make sure Docker is installed** on your system. You can download it from [Docker's official website](https://www.docker.com/products/docker-desktop/).
 
 2. **Run a MongoDB container** with the following command:
+
    ```bash
    docker run --name mongodb -d -p 27017:27017 mongo:latest
    ```
+
    This command:
    - Creates a container named "mongodb"
    - Runs it in detached mode (-d)
@@ -62,6 +67,7 @@ If you don't have MongoDB installed locally, you can easily run it in a Docker c
    - Uses the latest MongoDB image
 
 3. **Verify the container is running**:
+
    ```bash
    docker ps
    ```
@@ -79,19 +85,22 @@ If you don't have MongoDB installed locally, you can easily run it in a Docker c
 You can interact with the MongoDB container in several ways:
 
 1. **Using Docker exec to run commands**:
+
    ```bash
    docker exec -it mongodb mongosh
    ```
+
    This opens the MongoDB shell where you can execute commands directly.
 
 2. **Import the OLAP cube data into the container**:
+
    ```bash
    # First, copy all CSV files into the container
    docker cp northwind_csv_cubes/cube1.csv mongodb:/tmp/cube1.csv
    docker cp northwind_csv_cubes/cube2.csv mongodb:/tmp/cube2.csv
    docker cp northwind_csv_cubes/cube3.csv mongodb:/tmp/cube3.csv
    docker cp northwind_csv_cubes/cube4.csv mongodb:/tmp/cube4.csv
-   
+
    # Then import each cube into MongoDB
    docker exec -it mongodb mongoimport --db northwind_olap --collection cube1 --type csv --headerline --file /tmp/cube1.csv
    docker exec -it mongodb mongoimport --db northwind_olap --collection cube2 --type csv --headerline --file /tmp/cube2.csv
@@ -114,4 +123,4 @@ MongoDB Compass is a powerful GUI tool for exploring and manipulating MongoDB da
    - Click on the `northwind_olap` database
    - Browse collections (cube1, cube2, etc.)
    - Use the query builder to construct OLAP queries
-   - Visualize data using Compass's built-in charts and aggregation pipeline builder 
+   - Visualize data using Compass's built-in charts and aggregation pipeline builder

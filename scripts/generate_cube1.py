@@ -5,10 +5,11 @@ from colorama import Fore, Style, init
 # Initialize colorama
 init(autoreset=True)
 
+
 def generate_cube1():
     """
     Generate Cube 1 with customer and employee-related data along with order details.
-    
+
     Attributes:
         customerID, customerName, customerCity, customerCountry,
         employeeID, employeeName, employeeCity, employeeCountry,
@@ -16,7 +17,7 @@ def generate_cube1():
     """
     # Connect to the database
     conn = connect_to_northwind()
-    
+
     # Query to get customer, employee, and order data
     query = """
     SELECT 
@@ -41,23 +42,26 @@ def generate_cube1():
     GROUP BY 
         c.CustomerID, e.EmployeeID, orderMonth, orderYear
     """
-    
+
     print(f"{Fore.CYAN}Executing query for Cube 1...{Style.RESET_ALL}")
-    
+
     # Execute query and create DataFrame
     df = pd.read_sql_query(query, conn)
-    
+
     # Close connection
     conn.close()
-    
+
     print(f"{Fore.CYAN}Query completed. Generated {len(df)} records.{Style.RESET_ALL}")
-    
+
     # Save to CSV
     save_to_csv(df, "cube1")
-    
+
     return df
 
+
 if __name__ == "__main__":
-    print(f"{Fore.YELLOW}Generating Cube 1 - Customer, Employee, and Order data...{Style.RESET_ALL}")
+    print(
+        f"{Fore.YELLOW}Generating Cube 1 - Customer, Employee, and Order data...{Style.RESET_ALL}"
+    )
     generate_cube1()
     print(f"{Fore.GREEN}Cube 1 generation complete!{Style.RESET_ALL}")
