@@ -1,6 +1,6 @@
-# 🛠️ Setup and Usage
+# Setup and Usage
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.9 or higher
 - Required Python packages (install using):
@@ -9,7 +9,7 @@
   ```
 - MongoDB (for importing the generated data)
 
-## 🔄 Generating OLAP Cubes
+## Generating OLAP Cubes
 
 The scripts automatically download the Northwind database and transform it into MongoDB-compatible CSV files:
 
@@ -29,7 +29,7 @@ The scripts automatically download the Northwind database and transform it into 
    python scripts/generate_cube4.py  # Revenue analysis data
    ```
 
-## 🔍 Validating OLAP Cubes
+## Validating OLAP Cubes
 
 You can validate the generated cube CSV files to ensure they're properly structured:
 
@@ -46,7 +46,7 @@ The validation script checks:
 
 Each cube is validated against its expected schema, and a summary report is provided.
 
-## 🐳 Using MongoDB with Docker
+## Using MongoDB with Docker
 
 ### Setting Up MongoDB Container
 
@@ -108,7 +108,7 @@ You can interact with the MongoDB container in several ways:
    docker exec -it mongodb mongoimport --db northwind_olap --collection cube4 --type csv --headerline --file /tmp/cube4.csv
    ```
 
-### 🔍 Exploring Data with MongoDB Compass
+### Exploring Data with MongoDB Compass
 
 MongoDB Compass is a powerful GUI tool for exploring and manipulating MongoDB data visually.
 

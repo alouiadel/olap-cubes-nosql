@@ -1,10 +1,10 @@
-# 🚀 OLAP in NoSQL with MongoDB
+# OLAP in NoSQL with MongoDB
 
-## 📋 Overview
+## Overview
 
 Implementation of an OLAP (Online Analytical Processing) solution in a NoSQL environment using MongoDB.
 
-## 📚 Documentation
+## Documentation
 
 The project documentation is split into several files for better organization:
 
@@ -14,6 +14,6 @@ The project documentation is split into several files for better organization:
 - [Setup and Usage](docs/setup-and-usage.md) - Installation and usage instructions
 - [OLAP Cubes Overview](cubes-overview.md) - Detailed description of the cubes
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
