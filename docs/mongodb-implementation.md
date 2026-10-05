@@ -21,7 +21,7 @@ MongoDB is a document-oriented NoSQL database that stores data in flexible, JSON
 - **Map-Reduce** - Advanced computational operations for complex analytics
 - **High Performance** - In-memory processing options for faster analytics
 
-## 💫 Star Schema Migration to MongoDB
+## Star Schema Migration to MongoDB
 
 ### Transformation Process
 
@@ -31,7 +31,7 @@ MongoDB is a document-oriented NoSQL database that stores data in flexible, JSON
   - Document references (normalization)
   - Hybrid approach based on access patterns
 
-### 📝 Example Migration
+### Example Migration
 
 #### Star Schema Example
 

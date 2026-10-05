@@ -1,11 +1,11 @@
 import pandas as pd
+from colorama import Fore, Style, init
 from utils import (
+    categorize_order_count,
+    categorize_sales,
     connect_to_northwind,
     save_to_csv,
-    categorize_order_amount,
-    categorize_sales,
 )
-from colorama import Fore, Style, init
 
 # Initialize colorama
 init(autoreset=True)
@@ -26,7 +26,7 @@ def generate_cube3():
     SELECT 
         c.City as customerCity,
         c.Country as customerCountry,
-        COUNT(o.OrderID) as orderCount,
+        COUNT(DISTINCT o.OrderID) as orderCount,
         SUM(od.UnitPrice * od.Quantity * (1 - od.Discount)) as totalSales,
         COUNT(DISTINCT c.CustomerID) as customer_num
     FROM 
@@ -51,12 +51,9 @@ def generate_cube3():
 
     print(f"{Fore.CYAN}Query completed. Generated {len(df)} records.{Style.RESET_ALL}")
 
-    # Additional check to filter out any rows where both city and country are null
-    df = df[~(df["customerCity"].isnull() & df["customerCountry"].isnull())]
-
     # Categorize order and sales levels
     print(f"{Fore.CYAN}Categorizing order and sales levels...{Style.RESET_ALL}")
-    df["orderLevel"] = df["orderCount"].apply(categorize_order_amount)
+    df["orderLevel"] = df["orderCount"].apply(categorize_order_count)
     df["salesLevel"] = df["totalSales"].apply(categorize_sales)
 
     # Drop the raw columns that were used for categorization

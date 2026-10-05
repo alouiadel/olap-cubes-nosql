@@ -1,6 +1,6 @@
 import pandas as pd
-from utils import connect_to_northwind, save_to_csv
 from colorama import Fore, Style, init
+from utils import connect_to_northwind, save_to_csv
 
 # Initialize colorama
 init(autoreset=True)

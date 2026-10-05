@@ -1,6 +1,6 @@
 import pandas as pd
-from utils import connect_to_northwind, save_to_csv, categorize_price, categorize_stock
 from colorama import Fore, Style, init
+from utils import categorize_price, categorize_stock, connect_to_northwind, save_to_csv
 
 # Initialize colorama
 init(autoreset=True)
@@ -26,8 +26,8 @@ def generate_cube2():
         s.Country as supplierCountry,
         c.CategoryID as categorieID,
         c.CategoryName as categorieName,
-        p.UnitPrice as unitPrice,
-        p.UnitsInStock as unitsInStock,
+        AVG(p.UnitPrice) as unitPrice,
+        AVG(p.UnitsInStock) as unitsInStock,
         COUNT(p.ProductID) as produit_num
     FROM 
         Products p

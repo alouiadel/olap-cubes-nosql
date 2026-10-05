@@ -1,7 +1,8 @@
 import os
-import pandas as pd
 from pathlib import Path
-from colorama import Fore, Style, init, Back
+
+import pandas as pd
+from colorama import Back, Fore, Style, init
 
 # Initialize colorama
 init(autoreset=True)
@@ -60,9 +61,9 @@ def check_file_exists(file_path):
     """Check if a file exists at the given path"""
     exists = os.path.isfile(file_path)
     if exists:
-        print(f"{Fore.GREEN}✓ File exists: {file_path}{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}OK File exists: {file_path}{Style.RESET_ALL}")
     else:
-        print(f"{Fore.RED}✗ File does not exist: {file_path}{Style.RESET_ALL}")
+        print(f"{Fore.RED}FAIL File does not exist: {file_path}{Style.RESET_ALL}")
     return exists
 
 
@@ -73,12 +74,12 @@ def validate_columns(df, cube_name):
 
     if missing_columns:
         print(
-            f"{Fore.RED}✗ Missing columns in {cube_name}: {', '.join(missing_columns)}{Style.RESET_ALL}"
+            f"{Fore.RED}FAIL Missing columns in {cube_name}: {', '.join(missing_columns)}{Style.RESET_ALL}"
         )
         return False
     else:
         print(
-            f"{Fore.GREEN}✓ All expected columns present in {cube_name}{Style.RESET_ALL}"
+            f"{Fore.GREEN}OK All expected columns present in {cube_name}{Style.RESET_ALL}"
         )
         return True
 
@@ -118,12 +119,12 @@ def validate_data_integrity(df, cube_name):
 
     if issues:
         print(
-            f"{Fore.RED}✗ Data integrity issues in {cube_name}: {', '.join(issues)}{Style.RESET_ALL}"
+            f"{Fore.RED}FAIL Data integrity issues in {cube_name}: {', '.join(issues)}{Style.RESET_ALL}"
         )
         return False
     else:
         print(
-            f"{Fore.GREEN}✓ Data integrity checks passed for {cube_name}{Style.RESET_ALL}"
+            f"{Fore.GREEN}OK Data integrity checks passed for {cube_name}{Style.RESET_ALL}"
         )
         return True
 
@@ -149,22 +150,27 @@ def validate_cube(cube_name):
         # Validate columns
         columns_valid = validate_columns(df, cube_name)
 
-        # Validate data integrity
-        data_valid = validate_data_integrity(df, cube_name)
+        # Validate data integrity only if the columns are present
+        if columns_valid:
+            data_valid = validate_data_integrity(df, cube_name)
+        else:
+            data_valid = False
 
         # Overall validation result
         is_valid = columns_valid and data_valid
         if is_valid:
-            print(f"{Fore.GREEN}{Style.BRIGHT}✓ {cube_name} is valid!{Style.RESET_ALL}")
+            print(
+                f"{Fore.GREEN}{Style.BRIGHT}OK {cube_name} is valid!{Style.RESET_ALL}"
+            )
         else:
             print(
-                f"{Fore.RED}{Style.BRIGHT}✗ {cube_name} has validation issues!{Style.RESET_ALL}"
+                f"{Fore.RED}{Style.BRIGHT}FAIL {cube_name} has validation issues!{Style.RESET_ALL}"
             )
 
         return is_valid
 
-    except Exception as e:
-        print(f"{Fore.RED}✗ Error validating {cube_name}: {str(e)}{Style.RESET_ALL}")
+    except (OSError, ValueError, KeyError) as e:
+        print(f"{Fore.RED}FAIL Error validating {cube_name}: {e!s}{Style.RESET_ALL}")
         return False
 
 
@@ -177,14 +183,14 @@ def validate_all_cubes():
     results = {}
     all_valid = True
 
-    for cube_name in EXPECTED_SCHEMAS.keys():
+    for cube_name in EXPECTED_SCHEMAS:
         results[cube_name] = validate_cube(cube_name)
         all_valid = all_valid and results[cube_name]
 
     # Print summary
     print(f"\n{Fore.CYAN}{Style.BRIGHT}Validation Summary:{Style.RESET_ALL}")
     for cube_name, is_valid in results.items():
-        status_symbol = "✓" if is_valid else "✗"
+        status_symbol = "OK" if is_valid else "FAIL"
         status_color = Fore.GREEN if is_valid else Fore.RED
         print(
             f"{status_color}{status_symbol} {cube_name}: {'Valid' if is_valid else 'Invalid'}{Style.RESET_ALL}"

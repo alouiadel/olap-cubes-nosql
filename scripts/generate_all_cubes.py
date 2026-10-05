@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
-from colorama import Fore, Style, init, Back
+
+from colorama import Back, Fore, Style, init
 
 # Add the scripts directory to the Python path so we can find the modules
 sys.path.append(str(Path(__file__).parent))

@@ -1,70 +1,70 @@
 customerCity,customerCountry,customer_num,orderLevel,salesLevel
-Aachen,Germany,1,High,High
-Albuquerque,USA,1,High,High
-Anchorage,USA,1,High,High
-Barcelona,Spain,1,High,High
-Barquisimeto,Venezuela,1,High,High
-Bergamo,Italy,1,High,High
-Berlin,Germany,1,High,High
-Bern,Switzerland,1,High,High
-Boise,USA,1,High,High
-Brandenburg,Germany,1,High,High
-Bruxelles,Belgium,1,High,High
-Bräcke,Sweden,1,High,High
-Buenos Aires,Argentina,3,High,High
-Butte,USA,1,High,High
-Campinas,Brazil,1,High,High
-Caracas,Venezuela,1,High,High
-Charleroi,Belgium,1,High,High
-Cork,Ireland,1,High,High
-Cowes,UK,1,High,High
-Cunewalde,Germany,1,High,High
-Elgin,USA,1,High,High
-Eugene,USA,1,High,High
-Frankfurt a.M.,Germany,1,High,High
-Genève,Switzerland,1,High,High
-Graz,Austria,1,High,High
-Helsinki,Finland,1,High,High
-I. de Margarita,Venezuela,1,High,High
-Kirkland,USA,1,High,High
-Kobenhavn,Denmark,1,High,High
-Köln,Germany,1,High,High
-Lander,USA,1,High,High
-Leipzig,Germany,1,High,High
-Lille,France,1,High,High
-Lisboa,Portugal,2,High,High
+Aachen,Germany,1,Low,High
+Albuquerque,USA,1,Low,High
+Anchorage,USA,1,Low,High
+Barcelona,Spain,1,Low,High
+Barquisimeto,Venezuela,1,Low,High
+Bergamo,Italy,1,Low,High
+Berlin,Germany,1,Low,High
+Bern,Switzerland,1,Low,High
+Boise,USA,1,Low,High
+Brandenburg,Germany,1,Low,High
+Bruxelles,Belgium,1,Low,High
+Bräcke,Sweden,1,Low,High
+Buenos Aires,Argentina,3,Medium,High
+Butte,USA,1,Low,High
+Campinas,Brazil,1,Low,High
+Caracas,Venezuela,1,Low,High
+Charleroi,Belgium,1,Low,High
+Cork,Ireland,1,Low,High
+Cowes,UK,1,Low,High
+Cunewalde,Germany,1,Low,High
+Elgin,USA,1,Low,High
+Eugene,USA,1,Low,High
+Frankfurt a.M.,Germany,1,Low,High
+Genève,Switzerland,1,Low,High
+Graz,Austria,1,Low,High
+Helsinki,Finland,1,Low,High
+I. de Margarita,Venezuela,1,Low,High
+Kirkland,USA,1,Low,High
+Kobenhavn,Denmark,1,Low,High
+Köln,Germany,1,Low,High
+Lander,USA,1,Low,High
+Leipzig,Germany,1,Low,High
+Lille,France,1,Low,High
+Lisboa,Portugal,2,Medium,High
 London,UK,6,High,High
-Luleå,Sweden,1,High,High
-Lyon,France,1,High,High
-Madrid,Spain,3,High,High
-Mannheim,Germany,1,High,High
-Marseille,France,1,High,High
-Montréal,Canada,1,High,High
+Luleå,Sweden,1,Low,High
+Lyon,France,1,Low,High
+Madrid,Spain,3,Medium,High
+Mannheim,Germany,1,Low,High
+Marseille,France,1,Low,High
+Montréal,Canada,1,Low,High
 México D.F.,Mexico,5,High,High
-München,Germany,1,High,High
-Münster,Germany,1,High,High
-Nantes,France,2,High,High
-Oulu,Finland,1,High,High
-Paris,France,2,High,High
-Portland,USA,2,High,High
-Reggio Emilia,Italy,1,High,High
-Reims,France,1,High,High
-Resende,Brazil,1,High,High
-Rio de Janeiro,Brazil,3,High,High
-Salzburg,Austria,1,High,High
-San Cristóbal,Venezuela,1,High,High
-San Francisco,USA,1,High,High
+München,Germany,1,Low,High
+Münster,Germany,1,Low,High
+Nantes,France,2,Medium,High
+Oulu,Finland,1,Low,High
+Paris,France,2,Medium,High
+Portland,USA,2,Medium,High
+Reggio Emilia,Italy,1,Low,High
+Reims,France,1,Low,High
+Resende,Brazil,1,Low,High
+Rio de Janeiro,Brazil,3,Medium,High
+Salzburg,Austria,1,Low,High
+San Cristóbal,Venezuela,1,Low,High
+San Francisco,USA,1,Low,High
 Sao Paulo,Brazil,4,High,High
-Seattle,USA,1,High,High
-Sevilla,Spain,1,High,High
-Stavern,Norway,1,High,High
-Strasbourg,France,1,High,High
-Stuttgart,Germany,1,High,High
-Torino,Italy,1,High,High
-Toulouse,France,1,High,High
-Tsawassen,Canada,1,High,High
-Vancouver,Canada,1,High,High
-Versailles,France,1,High,High
-Walla Walla,USA,1,High,High
-Warszawa,Poland,1,High,High
-Århus,Denmark,1,High,High
+Seattle,USA,1,Low,High
+Sevilla,Spain,1,Low,High
+Stavern,Norway,1,Low,High
+Strasbourg,France,1,Low,High
+Stuttgart,Germany,1,Low,High
+Torino,Italy,1,Low,High
+Toulouse,France,1,Low,High
+Tsawassen,Canada,1,Low,High
+Vancouver,Canada,1,Low,High
+Versailles,France,1,Low,High
+Walla Walla,USA,1,Low,High
+Warszawa,Poland,1,Low,High
+Århus,Denmark,1,Low,High

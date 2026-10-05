@@ -1,7 +1,9 @@
 import os
 import sqlite3
-from pathlib import Path
+import urllib.error
 import urllib.request
+from pathlib import Path
+
 from colorama import Fore, Style, init
 
 # Initialize colorama
@@ -30,7 +32,7 @@ def download_northwind_db(db_path):
             f"{Fore.GREEN}Successfully downloaded Northwind database to {db_path}{Style.RESET_ALL}"
         )
         return True
-    except Exception as e:
+    except (OSError, urllib.error.URLError) as e:
         print(f"{Fore.RED}Error downloading Northwind database: {e}{Style.RESET_ALL}")
         return False
 
@@ -80,57 +82,43 @@ def save_to_csv(df, cube_name):
     print(f"{Fore.GREEN}Data saved to {output_path}{Style.RESET_ALL}")
 
 
+def _categorize_value(value, low_threshold, medium_threshold):
+    """
+    Categorize a numeric value into Unknown/Low/Medium/High levels.
+    """
+    if value is None:
+        return "Unknown"
+    elif value < low_threshold:
+        return "Low"
+    elif value < medium_threshold:
+        return "Medium"
+    else:
+        return "High"
+
+
 def categorize_price(price):
     """
     Categorize price into levels
     """
-    if price is None:
-        return "Unknown"
-    elif price < 10:
-        return "Low"
-    elif price < 50:
-        return "Medium"
-    else:
-        return "High"
+    return _categorize_value(price, 10, 50)
 
 
 def categorize_stock(units):
     """
     Categorize stock level
     """
-    if units is None:
-        return "Unknown"
-    elif units < 10:
-        return "Low"
-    elif units < 50:
-        return "Medium"
-    else:
-        return "High"
+    return _categorize_value(units, 10, 50)
 
 
-def categorize_order_amount(amount):
+def categorize_order_count(order_count):
     """
-    Categorize order amount into levels
+    Categorize the number of orders into levels
     """
-    if amount is None:
-        return "Unknown"
-    elif amount < 1000:
-        return "Low"
-    elif amount < 5000:
-        return "Medium"
-    else:
-        return "High"
+    return _categorize_value(order_count, 300, 600)
 
 
 def categorize_sales(amount):
     """
     Categorize sales level
     """
-    if amount is None:
-        return "Unknown"
-    elif amount < 5000:
-        return "Low"
-    elif amount < 20000:
-        return "Medium"
-    else:
-        return "High"
+    return _categorize_value(amount, 5000, 20000)
